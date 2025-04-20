@@ -24,5 +24,18 @@ namespace ultramegalust
         {
             InitializeComponent();
         }
+
+        private void Subtract_Click(object sender, RoutedEventArgs e)
+        {
+            if (double.TryParse(Input1.Text, out double a) && double.TryParse(Input2.Text, out double b))
+            {
+                ResultText.Text = $"Результат: {a - b}";
+            }
+            else
+            {
+                ResultText.Text = "Ошибка ввода";
+            }
+        }
+
     }
 }
