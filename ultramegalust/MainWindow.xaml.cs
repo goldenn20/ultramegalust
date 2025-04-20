@@ -24,5 +24,21 @@ namespace ultramegalust
         {
             InitializeComponent();
         }
+
+        private void Divide_Click(object sender, RoutedEventArgs e)
+        {
+            if (double.TryParse(Input1.Text, out double a) && double.TryParse(Input2.Text, out double b))
+            {
+                if (b != 0)
+                    ResultText.Text = $"Результат: {a / b}";
+                else
+                    ResultText.Text = "Деление на ноль!";
+            }
+            else
+            {
+                ResultText.Text = "Ошибка ввода";
+            }
+        }
+
     }
 }
